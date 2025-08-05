@@ -1,0 +1,11 @@
+aggModel/model/
+│
+├── __init__.py
+├── config.py          # global parameter defaults and scenario definitions
+├── utils.py           # shared helper/utility functions (weighted choice, mutations, etc.)
+├── baseModel.py      # PopulationModel (base class); handles state initialization, aggregation, recording history; no scenario-specific logic here
+├── moran.py           # MoranSimulation class; implement moranSimulation using functions from scenarios.py and utils.py; step method is concise because heavy lifting done elsewhere
+├── rescue.py          # RescueSimulation class
+├── scenarios.py       # scenario-specific rate/fitness functions (eg deathRate, fitness, etc based on scenario); separate biological logic from simulation loops
+├── runSim.py  # script to run simulations; entry point script to run experiments; handles command-line args or interactive runs
+└── plotUtils.py      # optional: plotting functions
